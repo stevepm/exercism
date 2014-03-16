@@ -3,6 +3,7 @@ require_relative 'hamming'
 
 class HammingTest < MiniTest::Unit::TestCase
   def test_no_difference_between_identical_strands
+    skip
     assert_equal 0, Hamming.compute('A', 'A')
   end
 
@@ -32,7 +33,6 @@ class HammingTest < MiniTest::Unit::TestCase
   end
 
   def test_ignores_extra_length_on_other_strand_when_longer
-    skip
     assert_equal 0, Hamming.compute('AAA', 'AAAG')
   end
 
