@@ -6,8 +6,7 @@ class Hamming
     hamming = 0
     if first_array.count <= second_array.count
       first_array.count.times do |num|
-        if first_array[num-1] != second_array[num-1] && !first_array[num-1].empty? && !second_array[num-1].empty?
-          print "first " + first_array[num-1] + " second "+ second_array[num-1]
+        if first_array[num] != second_array[num] && !first_array[num].empty? && !second_array[num].empty?
           hamming += 1
         end
       end
