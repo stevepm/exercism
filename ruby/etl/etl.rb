@@ -1,16 +1,11 @@
 class ETL
-  def initialize
-  end
-
   def self.transform(old)
-    test = {}
+    new = {}
     old.each do |key,value|
       value.each do |letter|
-        test[letter.downcase] = key
+        new[letter.downcase] = key
       end
     end
-    test
+    new
   end
-
-
 end
